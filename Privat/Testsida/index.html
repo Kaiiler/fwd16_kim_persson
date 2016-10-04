@@ -11,21 +11,54 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <script src="js/Scripts.js"></script>
   <script src="jquery-1.12.4.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 </head>
 
 <body>
 <header>
-<h1>Gnarly Kidz</h1>
-<a id="menu-button"></a>
-  <div id="hamburger-menu">
-    <nav>
-      <a href="">Home</a>
-      <a href="">About</a>
-      <a href="">Works</a>
-      <a href="">Contact</a>
-    </nav>
-  </div>
-  <div id="overlay"></div>
+<nav>
+ <ul class="topnav" id="myTopnav">
+  <li><a href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </li>
+</ul>
+</nav>
  </header>
+ <div id="page">
+     <header>
+         <h1>Gnarly Kidz</h1>
+         <img src="img/axell3.jpg" alt="picture of axell hodges">
+     </header>
+     <main>
+     <section>
+         <h2>Shirts</h2>
+         <p>Fresh shirt collection!</p>
+         <ul class="flex-container">
+  <li class="flex-item"><img src="img/axell.jpg"></li>
+  <li class="flex-item"><img src="img/axell.jpg"></li>
+  <li class="flex-item"><img src="img/axell.jpg"></li>
+  <li class="flex-item"><img src="img/axell.jpg"></li>
+</ul>
+     </section>
+     <section>
+         <h2>Hats</h2>
+         <p>Our new hat collection!</p>
+         <ul class="flex-container">
+  <li class="flex-item"><img src="img/axell3.jpg"></li>
+  <li class="flex-item"><img src="img/axell3.jpg"></li>
+  <li class="flex-item"><img src="img/axell3.jpg"></li>
+  <li class="flex-item"><img src="img/axell3.jpg"></li>
+</ul>
+     </section>
+     </main>
+ </div>
+ <footer>
+     <p><small>Copyright © Gnarly Kidz</small></p>
+         <p id="bytext">Page by KP Web</p>
+ </footer>
 </body>
 </html>

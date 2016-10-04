@@ -1,90 +1,115 @@
-
-
-/* HAMBURGER MENU - PHONE - TABLET */
-@import url(http://fonts.googleapis.com/css?family=Fira+Sans:400);
-
-$size: 50px;
-
-#menu-button {
-  position: fixed;
-  top: 20px;
-  left: 20px;
-  display: block;
-  width: 50px;
-  height: 50px;
-  background: #111;
-  border-radius: 5px;
-  z-index: 200;
-  &:after {
-    position: absolute;
-    content: "☰";
-    font-size: 42px;
-    color: #FFF;
-    width: 50px;
-    height: 50px;
+img {
+    width: 100%;
+    height: auto;
+}
+#page{
+    font-family: 'Oswald', sans-serif;
+}
+#page h1{
+    display: none;
+}
+#page h2{
     text-align: center;
-    line-height: 50px;
-  }
-  &:hover {
-    opacity: .8;
-  }
+}
+#page p{
+   text-align: center;
+}
+footer{
+    border-top:1px solid black;
+    margin-top: 5%;
+    text-align: center;
+}
+#bytext{
+    font-size: 10px;
+    color: dimgray;
+    font-style: italic;
+}
+/* HAMBURGER MENU - PHONE - TABLET */
+/* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #FFF;
+    font-family: 'Oswald', sans-serif;
 }
 
-#menu-button.on {
-  &:after {
-    content: "x";
-  }
+/* Float the list items side by side */
+ul.topnav li {float: left;}
+
+/* Style the links inside the list items */
+ul.topnav li a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
 }
 
-#overlay {
-  display: none;
-  height: 100vh;
-  width: 100%;
-  position: fixed;
-  z-index: 99;
-  opacity: 0;
-  background-color: rgba(0,0,0,0.4);
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #555;}
 
-#overlay.open {
-  display: block;
-}
-
-#hamburger-menu {
-  height: 50px;
-  width: 50px;
-  background: #111;
-  position: fixed;
-  top: 20px;
-  left: 90px;
-  z-index: 101;
-  overflow: hidden;
-  border-radius: 5px;
-
-  nav {
-    padding: 10px;
-    z-index: 101;
-    overflow-y: hidden;
-    overflow-x: hidden;
-    
-    a {
-      display: block;
-      padding: 10px;
-      height: 1em;
-      color: #CCC;
-      font-size: 1em;
-      line-height: 1em;
-      text-decoration: none;
-      overflow: hidden;
-
-      &:hover {
-        cursor: pointer;
-        color: #FFF;
-        background: rgba(255,255,255,0.02);
-      }
-    }
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+/* When the screen is less than 680 pixels wide, hide all list items, except for the first one ("Home"). Show the list item that contains the link to open and close the topnav (li.icon) */
+@media screen and (max-width:680px) {
+  ul.topnav li {display: none;}
+  ul.topnav li.icon {
+    float: right;
+    display: inline-block;
   }
 }
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens */
+@media screen and (max-width:680px) {
+  ul.topnav.responsive {position: relative;}
+  ul.topnav.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  ul.topnav.responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+}
+/* FLEXBOX */
+@import "compass/css3";
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  background: black;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+  margin-top: 10px;
+  
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+/* Google Fonts */
+@import url(http://fonts.googleapis.com/css?family=Oswald);
