@@ -9,31 +9,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/script.js"></script>
 </head>
 
 <body>
     <header class="header">
-           
-           <div class="logo"><img src="img/viggen.png" alt="Picture of a Saab Viggen"></div>
+
+        <div class="logo"><img src="img/viggen.png" alt="Picture of a Saab Viggen"></div>
         <nav class="menu" id="myTopnav">
+            <input type="checkbox" name="hambuger" id="hamburger">
+            <label for="hamburger">
+                <div class="hamburger">
+                    <div class="line"></div>
+                    <div class="line"></div>
+                    <div class="line"></div>
+                </div>
+            </label>
             <ul>
                 <li><a href="">Home</a></li>
                 <li><a href="">About Us</a></li>
                 <li class="dropdown">
                     <a href="">Products</a>
-                    <div class="dropdown-content">
-                        <a href="">Product 1</a>
-                        <a href="">Product 2</a>
-                        <a href="">Product 3</a>
-                        <li><a href="">Services</a></li>
-                        <li><a href="">FAQ</a></li>
-                        <li><a href="">Contact Us</a></li>
-                        <li class="icon">
-                        <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
-
-                    </div>
+                    <ul>
+                        <li><a href="">Product 1</a></li>
+                        <li><a href="">Product 2</a></li>
+                        <li><a href="">Product 3</a></li>
+                    </ul>
                 </li>
+                <li><a href="">Services</a></li>
+                <li><a href="">FAQ</a></li>
+                <li><a href="">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -47,28 +51,28 @@
             </section>
         </aside>
         <div class="main">
-           <section>
-            <h2>Ontario</h2>
-            <h3>Toronto</h3>
-            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. <span class="bluetext">Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</span> Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. <span class="redtext underlinetext">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span> Cum quisquam impedit animi, repudiandae tempora fuga sint atque illo perferendis voluptas ullam asperiores fugit.<span class="redtext linetroughtext"> Et velit deleniti illo iure. Corporis, deleniti!</span></p>
+            <section>
+                <h2>Ontario</h2>
+                <h3>Toronto</h3>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. <span class="bluetext">Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.</span> Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. <span class="redtext underlinetext">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span> Cum quisquam impedit animi, repudiandae tempora fuga sint atque illo perferendis voluptas ullam asperiores fugit.<span class="redtext linetroughtext"> Et velit deleniti illo iure. Corporis, deleniti!</span></p>
             </section>
             <div class="weirdbox">
-            <h2>Special Effects</h2>
+                <h2>Special Effects</h2>
             </div>
             <section>
-            <h2>British Colombia</h2>
-            <h3>Victoria</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet odio vel ipsam eius consequatur sequi autem magnam. Debitis reiciendis, nulla, dolore odio illum quia ut molestiae numquam expedita minus, ipsam.</p>
-            <h1>Prince Edward</h1>
-            <h2>Charlottetown</h2>
+                <h2>British Colombia</h2>
+                <h3>Victoria</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet odio vel ipsam eius consequatur sequi autem magnam. Debitis reiciendis, nulla, dolore odio illum quia ut molestiae numquam expedita minus, ipsam.</p>
+                <h1>Prince Edward</h1>
+                <h2>Charlottetown</h2>
             </section>
-        <div class="secondWeirdbox">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dignissimos officia, fuga harum! Sequi perspiciatis officia, molestias, nulla qui nihil veritatis facere eligendi omnis at suscipit laborum eum quo odit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
-        </div>
-           <section>
-            <h2>Manitoba</h2>
-            <h3>Winnipeg</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eligendi, nam iste blanditiis molestiae laboriosam at, laborum sequi esse reiciendis ad aspernatur delectus nobis excepturi ipsum qui modi in aut.</p>
+            <div class="secondWeirdbox">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut dignissimos officia, fuga harum! Sequi perspiciatis officia, molestias, nulla qui nihil veritatis facere eligendi omnis at suscipit laborum eum quo odit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+            </div>
+            <section>
+                <h2>Manitoba</h2>
+                <h3>Winnipeg</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eligendi, nam iste blanditiis molestiae laboriosam at, laborum sequi esse reiciendis ad aspernatur delectus nobis excepturi ipsum qui modi in aut.</p>
             </section>
         </div>
     </div>
@@ -76,32 +80,3 @@
 </body>
 
 </html>
-<!-- <div class="flex-container">
-    <header>
-        <div class="flex-item" id="headerbox">
-            <ul>
-                <li><a href="">Item1</a></li>
-                <li><a href="">Item2</a></li>
-                <li><a href="">Item3</a></li>
-                <li><a href="">Item4</a></li>
-                <li class="dropdown">
-                    <a href="">item5</a>
-                    <div class="dropdown-content">
-                        <a href="">link 1</a>
-                        <a href="">link 2</a>
-                        <a href="">link 3</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </header>
-    <main class="flex-item" id="mainbox">
-        
-    </main>
-    <aside class="flex-item" id="asidebox">
-        
-    </aside>
-    <footer class="flex-item" id="footerbox">
-        
-    </footer>
-</div> -->
