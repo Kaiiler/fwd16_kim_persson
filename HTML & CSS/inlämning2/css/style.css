@@ -14,6 +14,10 @@ body {
     text-align: center;
     width: 100%;
 }
+.wrapper > *{
+padding: 10px;
+box-sizing: border-box;
+}
 .header {
     height: 150px;
     margin-bottom: 5px;
@@ -33,6 +37,7 @@ body {
     width: 100%;
     margin-bottom: 5px;
     order: 1;
+    height: 100%;
 }
 .main h2, h3{
     color:tomato;
@@ -59,6 +64,7 @@ body {
     margin-bottom: 5px;
     width: 100%;
     order: 2;
+    height: 70%;
 }
  .weirdbox{
     width: 60%;
@@ -88,9 +94,35 @@ body {
    margin: 30px; 
 }
 
+/*MENU*/
 
-
-
+menu li:not(:first-child) {display: none;}
+  menu li.icon {
+    float: right;
+    display: inline-block;
+  }
+menu.responsive {
+    position: relative;
+}
+  menu.responsive li.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  menu.responsive li {
+    float: none;
+    display: inline;
+  }
+  menu.topnav.responsive li a {
+    display: block;
+    text-align: left;
+  }
+.icon {
+    display: flex;
+}
+.menu{
+    list-style: none;
+}
 
 
 /* MEDIA QUERY*/
@@ -114,7 +146,6 @@ body {
         order: 1;
         width: 150px;
         margin-left: 5px;
-        overflow: hidden;
     }
     .header {
         width: 100%;
@@ -185,4 +216,5 @@ body {
     .dropdown:hover .dropdown-content {
         display: block;
     }
+    .icon {display: none;}
 }
