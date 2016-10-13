@@ -30,17 +30,34 @@ body {
 .main {
     text-align: left;
     border: 1px solid black;
-    height: 1500px;
     width: 100%;
     margin-bottom: 5px;
     order: 1;
+}
+.main h2, h3{
+    color:tomato;
+    font-family: serif;
+}
+.main p{
+    font-family: serif;
+}
+.bluetext{
+    color: blue;
+}
+.redtext{
+    color:red;
+}
+.underlinetext{
+    text-decoration: underline;
+}
+.linetroughtext{
+    text-decoration: line-through;
 }
 .aside-1 {
     border: 1px solid black;
     height: auto;
     margin-bottom: 5px;
     width: 100%;
-    height: 1300px;
     order: 2;
 }
  .weirdbox{
@@ -48,17 +65,35 @@ body {
     height: 7%;
     background-color: crimson;
     border-radius: 7px 25px;
-     text-align: center;
-     padding-top: 4%;
-     margin: auto;
+    text-align: center;
+    margin:auto;
+     padding-top: 3%;
 }
 .weirdbox h2{
     color:darkgoldenrod;
     text-shadow: -2px -2px 8px black;
     font-family: serif;
     font-size: 200%;
+    margin: 0;
+}
+.secondWeirdbox{
+    height:auto;
+    width: 80%;
+    background-color: bisque;
+    border-bottom: 2px solid yellow;
+    border-top: 2px solid yellow;
+    margin: auto;
+}
+.secondWeirdbox p{
+   margin: 30px; 
 }
 
+
+
+
+
+
+/* MEDIA QUERY*/
 @media all and (min-width: 800px) {
     .wrapper {
         width: 70%;
@@ -70,6 +105,7 @@ body {
         margin-left: 5px;
         margin-bottom: 5px;
     }
+   
     .footer{
         width: 70%;
         margin-left: 15%;
@@ -78,21 +114,27 @@ body {
         order: 1;
         width: 150px;
         margin-left: 5px;
+        overflow: hidden;
     }
     .header {
         width: 100%;
         margin-bottom: 5px;
+        display: flex;
     }
     .header img {
-        display: inline-block;
+        display: flex;
+        width: 100%;
     }
     .menu {
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        flex: 1 1 100%;
     }
     ul {
         list-style-type: none;
         padding: 0;
         overflow: hidden;
+        margin-top: 4%;
         
     }
     li {
@@ -113,7 +155,7 @@ body {
         display: inline-block;
         color: white;
         text-align: center;
-        padding: 14px 16px;
+        padding: 6px 16px;
         text-decoration: none;
          border-radius: 10px;
     }
