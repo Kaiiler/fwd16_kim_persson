@@ -1,0 +1,242 @@
+body {
+    background-image: url("http://i.imgur.com/la6GUSo.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+    box-sizing: border-box;
+}
+
+/* Landing page */
+
+#landingWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#landingWrapper a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+#landingWrapper h1 {
+    margin: 0;
+}
+#landingWrapper p {
+    margin: 5px;
+    ;
+}
+#landingWrapper a i {
+    font-size: 5em;
+    color: darkseagreen;
+}
+
+/*End of Landing page*/
+
+
+/*MENU*/
+
+.header {
+    display: flex;
+}
+input#hamburger {
+    display: none;
+}
+.hamburger {
+    background: #444;
+    display: inline-block;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.hamburger div {
+    height: 2px;
+    width: 20px;
+    background: #fff;
+    margin: 4px;
+}
+.menu > ul {
+    position: fixed;
+    top: 40px;
+    right: 0;
+    margin: 0;
+    padding: 5px 0;
+    list-style: none;
+    transform: translateX(100%);
+    background: #444;
+    border-radius: 3px 0 0 3px;
+    transition: all 0.3s ease;
+}
+.menu ul li {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #444;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 20px;
+    display: block;
+}
+.menu ul ul {
+    display: block;
+    position: static;
+    list-style: none;
+    padding: 0 10px 10px 10px;
+    font-size: 14px;
+}
+input:checked ~ ul {
+    transform: translateX(0%);
+}
+.socialNav ul {
+    list-style: none;
+    font-size: 1.5em;
+    padding: 0;
+    display: flex;
+    margin-top: 10px;
+}
+.socialNav ul li {
+    justify-content: space-between;
+    margin-left: 5px;
+}
+.socialNav ul li a {
+    color: white;
+}
+
+/* End of MENU*/
+
+.flexcontainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.flexitem {
+    background-color: seagreen;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 75%;
+    opacity: 0.8;
+    border: 1px solid white;
+    margin-top: 30px;
+    color: white;
+}
+.subnav {
+    display: flex;
+}
+.WhiskeyType {
+    flex: 1 1 50%;
+}
+.subnav h3 {
+    margin: 0;
+}
+.brand {
+    flex: 1 1 50%;
+    text-align: right;
+}
+.btnbtn {
+    width: 100%;
+    height: 50px;
+    background-color: gold;
+    border: none;
+}
+.content img {
+    width: 100%;
+}
+
+/* FLEXITEM MEDIAQUERY*/
+
+@media all and (min-width: 600px) {
+    .flexitem {
+        width: 46%;
+        margin: 30px auto 1%;
+        min-width: 0;
+    }
+    .flexcontainer {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 85%;
+        margin-left: 10%;
+    }
+}
+
+/* MENU MEDIAQUERIES*/
+
+@media all and (min-width: 500px) {
+    label {
+        display: none;
+    }
+    .hamburger {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        justify-content: center;
+    }
+    .menu ul {
+        position: static;
+        transform: translateX(0%);
+        padding: 0;
+        background: none;
+        list-style-type: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .menu ul li {
+        text-transform: none;
+        letter-spacing: 1px;
+        background: rgba(0, 0, 0, 0.2);
+        font-weight: bold;
+        font-size: 1.5em;
+        flex: 1 1 50%;
+    }
+    .menu ul li:hover {
+        background: rgba(0, 0, 0, 0.4);
+    }
+    .menu ul ul {
+    position: absolute;
+    padding: 5px 0 0 0;
+    margin: 0;
+    transform: scale(0);
+    transform-origin: top;
+    transition: all 0.2s ease-out;
+}
+.menu ul ul li {
+    display: block;
+}
+li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 6px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+.icon {
+    display: none;
+}
+.header {
+    flex-direction: column;
+}
+.socialNav ul {
+    margin: 0;
+}
+.socialNav ul li {
+    flex: 1 1 25%;
+    background: rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin: 0;
+    font-size: 1.5em;
+}
+}
+
+
+
