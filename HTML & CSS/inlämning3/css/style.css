@@ -112,7 +112,7 @@ input:checked ~ ul {
 .flexcontainer {
     width: 100%;
     display: flex;
-    align-items: center;
+    
     justify-content: space-around;
     flex-direction: column;
     flex-wrap: wrap;
@@ -127,6 +127,7 @@ input:checked ~ ul {
     border: 1px solid white;
     margin-top: 30px;
     color: white;
+    margin-left: 12%;
 }
 .subheader {
     display: flex;
