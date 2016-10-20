@@ -115,6 +115,7 @@ input:checked ~ ul {
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 .flexitem {
     background-color: seagreen;
@@ -127,7 +128,7 @@ input:checked ~ ul {
     margin-top: 30px;
     color: white;
 }
-.subnav {
+.subheader {
     display: flex;
 }
 .WhiskeyType {
@@ -160,9 +161,11 @@ input:checked ~ ul {
     }
     .flexcontainer {
         flex-direction: row;
-        flex-wrap: wrap;
         width: 85%;
         margin-left: 10%;
+    }
+    .flexitem:nth-last-child(1){
+        width: 98%;
     }
 }
 
