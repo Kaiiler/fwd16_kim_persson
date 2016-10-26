@@ -49,7 +49,6 @@ body {
   width: 20px;
   background: #fff;
   margin: 4px 0;
-  
 }
 input#show-menu{
   display: none;
@@ -65,8 +64,7 @@ nav ul {
     align-items: : center;
     margin: 0;
     padding: 0;
-    list-style: none;
-   
+    list-style: none;   
 }
 nav ul li {
     padding: 0.5em;
@@ -101,15 +99,29 @@ li:hover {
 
 /*dropdownbtn*/
 
+ul li.dropdown{
+    position:relative;
+    
+}
 nav ul ul {
     display:none;
     position:absolute;
+    z-index: 99999;
+    width: 100%;
+    top:34px;
 }
 nav ul li:hover ul{
 	display: block;
 }
 nav ul ul li{
 	display: block;
+    width: 100%;
+    background:gray;
+    color:white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding:14px 0;
+    text-align: center;
 	}
 
 
@@ -221,6 +233,9 @@ header {
     }
 }
 @media all and (min-width: 1000px) {
+    nav ul ul {
+        top:64px;
+    }
     nav ul li {
         flex: 1;
     }
