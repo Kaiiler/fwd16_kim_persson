@@ -18,6 +18,14 @@
 
     <header>
         <div class="Menu">
+            <label for="show-menu">
+                <div class="hamburger">
+                    <div class="row"></div>
+                    <div class="row"></div>
+                    <div class="row"></div>
+                </div>
+            </label>
+            <input type="checkbox" id="show-menu">
             <nav>
                 <ul>
                     <li><a href="">Item 01</a></li>
@@ -25,13 +33,17 @@
                     <li><a href="">Item 03</a></li>
                     <li><a href="">Item 04</a></li>
                     <li><a href="">Item 05</a></li>
-                    <li><a href="">Item 06</a></li>
-                        <div class="social">
-                            <li><a href=""><i class="fa fa-facebook"></i></a></li>
-                            <li><a href=""><i class="fa fa-instagram"></i></a></li>
-                            <li><a href=""><i class="fa fa-twitter"></i></a></li>
-                            <li><a href=""><i class="fa fa-github"></i></a></li>
+                    <li class="dropdown"><a href="#">Item 06</a>
+                        <div class="dropdown-content">
+                            <a class="dropbtn" href="#">Item 01</a><a class="dropbtn" href="#">Item 02</a><a class="dropbtn" href="#">Item 03</a>
                         </div>
+                    </li>
+                    <div class="social">
+                        <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fa fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                        <li><a href=""><i class="fa fa-github"></i></a></li>
+                    </div>
                 </ul>
         </div>
         </nav>
