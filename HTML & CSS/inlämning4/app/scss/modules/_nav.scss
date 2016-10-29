@@ -1,0 +1,103 @@
+nav ul {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include respond-to('medium'){
+        flex-wrap:wrap;
+        flex-direction: row;
+        display:flex;
+    }
+    li{
+    padding: 0.5em;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        
+        @include respond-to('medium'){
+            flex: 1 45%;
+        }
+        
+        @include respond-to('large'){
+            flex: 1;
+        }
+        
+        &:hover{
+        background:  map-get($color, black5);
+        transition-duration: 0.1s;
+        transition: ease-in-out 0.2s;
+        }
+        
+        a{
+           text-decoration: none;
+    text-align: center;
+    color:  map-get($color, wText);
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;  
+        }
+    }
+}
+
+.social {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    order:-1;
+    
+    @include respond-to('medium'){
+        display: flex;
+        justify-content: space-between;
+        order:2
+    }
+    @include respond-to('large'){
+        width:auto;
+    }
+    
+    i{
+    padding: 1em;
+    color:  map-get($color, wText);
+    flex: 1;
+        
+        @include respond-to('medium'){
+            flex:1;
+        }
+        
+    }
+}
+
+//dropdown
+
+ul li.dropdown{
+    position:relative;  
+}
+nav ul ul {
+    display:none;
+    position:absolute;
+    z-index: 99999;
+    width: 100%;
+    top:(30px + 4);
+    li{
+      display: block;
+    background: map-get($color, navGray);
+    color: map-get($color, wText);
+    text-transform: uppercase;
+    font-weight: bold;
+    padding:14px 0;
+    text-align: center;
+    }
+    ul{
+        top:46px;
+    }
+    @include respond-to('large'){
+        top:(40px + 9);
+    }
+}
+nav ul li:hover > ul{
+	display: block;
+}

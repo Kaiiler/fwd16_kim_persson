@@ -1,0 +1,13 @@
+.flexcontainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    @include respond-to('wide'){
+        flex-direction:row;
+        width:80%;
+        margin-left:10%;
+    }
+}

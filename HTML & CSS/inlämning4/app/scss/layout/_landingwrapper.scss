@@ -1,0 +1,19 @@
+#landingWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    a{
+    color:  map-get($color, wText);
+    text-decoration: none;
+    text-align: center;
+        i{
+            font-size: 5em;
+            color: map-get($color, main);
+        }
+    }
+    p{
+        margin: 5px;
+    }  
+}

@@ -27,7 +27,6 @@ body {
 }
 #landingWrapper p {
     margin: 5px;
-    ;
 }
 #landingWrapper a i {
     font-size: 5em;
@@ -53,7 +52,7 @@ body {
 input#show-menu{
   display: none;
 }
-input#show-menu:checked ~ nav ul{
+input#show-menu:checked ~ nav > ul{
   display: flex;
 }
 
@@ -95,6 +94,7 @@ li:hover {
     text-align: center;
     display: flex;
     width: 100%;
+    order:-1;
 }
 
 /*dropdownbtn*/
@@ -224,6 +224,7 @@ header {
     .social {
         display: flex;
         justify-content: space-between;
+        order:2
     }
     i {
         flex: 1;

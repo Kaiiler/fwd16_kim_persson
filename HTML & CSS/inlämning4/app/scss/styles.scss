@@ -1,7 +1,4 @@
-.testing {
-  width: percentage(5/7);
-}
-
-body{
-  background-color: seagreen;
-}
+@import 'utilities/utilities.scss';
+@import 'base/base.scss';
+@import 'layout/layout.scss';
+@import 'modules/modules.scss';

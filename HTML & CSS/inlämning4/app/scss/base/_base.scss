@@ -1,16 +1,18 @@
-// Modern border-box applied everywhere.
-html {
-  box-sizing: border-box;
+@import 'normalize.scss';
+@import 'typography.scss';
+@import '../utilities/variables.scss';
+
+body {
+    background-image: url(../images/o-SCOTLAND-facebook1.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #777;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}
-
-// Mandatory select styling.
-::selection {
-  color: map-get($color, bright);
-  background: map-get($color, accent1);
+h1, h2{
+    margin:0;
 }
