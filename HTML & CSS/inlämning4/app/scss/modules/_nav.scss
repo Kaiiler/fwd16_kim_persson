@@ -2,7 +2,6 @@ nav ul {
     display: none;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -95,7 +94,7 @@ nav ul ul {
         top:46px;
     }
     @include respond-to('large'){
-        top:(40px + 9);
+        top:(60px + 4);
     }
 }
 nav ul li:hover > ul{
