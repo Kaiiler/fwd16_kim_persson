@@ -13,6 +13,7 @@ img {
 }
 #page {
     font-family: 'Oswald', sans-serif;
+    margin: 25px 0px 0px;
 }
 #page h1 {
     display: none;
@@ -34,7 +35,7 @@ footer {
     font-style: italic;
 }
 figure {
-    margin: 0;
+    margin:0;
 }
 
 /* HAMBURGER MENU - PHONE - TABLET */
@@ -49,12 +50,16 @@ ul.topnav {
     overflow: hidden;
     background-color: #FFF;
     font-family: 'Oswald', sans-serif;
+    position:fixed;
+    width: 100%;
 }
 
 /* Float the list items side by side */
 
-ul.topnav li {
-    float: left;
+ul.topnav {
+display:flex;
+    flex-direction: row;
+    top:0px;
 }
 
 /* Style the links inside the list items */
@@ -72,7 +77,8 @@ ul.topnav li a {
 /* Change background color of links on hover */
 
 ul.topnav li a:hover {
-    background-color: #555;
+    color:crimson;
+    border-bottom: 2px solid crimson;
 }
 
 /* Hide the list item that contains the link that should open and close the topnav on small screens */

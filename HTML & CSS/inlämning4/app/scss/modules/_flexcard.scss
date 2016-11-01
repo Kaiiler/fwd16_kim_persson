@@ -1,5 +1,5 @@
 .flexitem {
-    background-color:  map-get($color, main);
+    background-color:  color(main);
     display: flex;
     flex-direction: column;
     padding: 5px;
