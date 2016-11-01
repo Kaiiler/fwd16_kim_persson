@@ -1,0 +1,87 @@
+nav ul {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include respond-to('medium') {
+        flex-wrap: wrap;
+        flex-direction: row;
+        display: none;
+    }
+    @include respond-to('large'){
+        display:flex;
+    }
+    li {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include respond-to('medium') {
+            flex: 1 45%;
+        }
+        @include respond-to('large') {
+            flex: 1;
+        }
+        a {
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+            font-weight: bold;
+            flex: 1;
+            color: color(bText);
+            padding: 14px 5px;
+            border-bottom: 1px solid color(black2);
+            
+            &:hover {
+                color: color(main);
+                border-bottom: 1px solid color(main);
+            }
+            
+            span{
+                font-size:8px;
+                position:absolute;
+                top:20px;
+                right:60px;
+            }
+            
+        }
+        
+    }
+}
+
+
+
+//dropdown
+ul li.dropdown {
+    position: relative;
+}
+nav ul ul {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    width: 100%;
+    top: 48px;
+    li {
+        display: block;
+        background: color(wText);
+        color: color(bText);
+        text-transform: uppercase;
+        font-weight: bold;
+        text-align: center;
+    }
+    ul {
+        top: inherit;
+        
+        @include respond-to('large'){
+        top: 0px;
+        right:225px;
+        }
+    }
+}
+nav ul li:hover > ul {
+    display: block;
+}

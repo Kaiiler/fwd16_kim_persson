@@ -1,0 +1,11 @@
+header{
+    font-family: 'Raleway', sans-serif;
+    background-color:color(wText);
+    position:fixed;
+    width:100%;
+    top:0;
+    border-bottom: 1px solid color(black2);
+    @include respond-to('big'){
+        border-bottom:none;
+    }
+}
