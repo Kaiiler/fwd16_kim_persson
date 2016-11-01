@@ -27,18 +27,19 @@ nav ul {
         }
         
         &:hover{
-        background:  map-get($color, black5);
+        background:  color(black5);
         transition-duration: 0.1s;
         transition: ease-in-out 0.2s;
         }
         
         a{
-           text-decoration: none;
+    text-decoration: none;
     text-align: center;
-    color:  map-get($color, wText);
+    color:  color(wText);
     display: block;
     text-transform: uppercase;
-    font-weight: bold;  
+    font-weight: bold;
+            flex:1;
         }
     }
 }
@@ -60,7 +61,7 @@ nav ul {
     
     i{
     padding: 1em;
-    color:  map-get($color, wText);
+    color:  color(wText);
     flex: 1;
         
         @include respond-to('medium'){
@@ -83,8 +84,8 @@ nav ul ul {
     top:(30px + 4);
     li{
       display: block;
-    background: map-get($color, navGray);
-    color: map-get($color, wText);
+    background: color(navGray);
+    color: color(wText);
     text-transform: uppercase;
     font-weight: bold;
     padding:14px 0;

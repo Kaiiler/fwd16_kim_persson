@@ -31,3 +31,12 @@ $color: (
   black5: rgba(0,0,0,0.5),
   navGray: gray
 ) !default;
+
+// FUNCTION FOR CALLING COLORS EASILY
+@function color($key) {
+    @if map-has-key($color, $key) {
+        @return map-get($color, $key);
+    }@else{
+        @warn "No valid key was found";
+    }
+}

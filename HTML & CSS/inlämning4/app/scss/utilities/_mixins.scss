@@ -1,0 +1,22 @@
+// ANIMATION FOR HAMBURGERMENU 
+
+@mixin rowAnimation($rotationTop, $rotationBottom) {
+    @for $i from 1 through 3 {
+        @if $i==1 {
+            &:nth-child(#{$i}) {
+                transform: translateY(6px) rotate(#{$rotationTop});
+            }
+        }
+        @else if $i==2 {
+            &:nth-child(#{$i}) {
+                transform: rotate(#{$rotationTop});
+                opacity: 0;
+            }
+        }
+        @else if $i==3 {
+            &:nth-child(#{$i}) {
+                transform: translateY(-6px) rotate(#{$rotationBottom});
+            }
+        }
+    }
+}

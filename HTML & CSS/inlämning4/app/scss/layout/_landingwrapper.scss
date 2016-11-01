@@ -5,15 +5,16 @@
     height: 100vh;
     
     a{
-    color:  map-get($color, wText);
+    color:  color(wText);
     text-decoration: none;
     text-align: center;
         i{
             font-size: 5em;
-            color: map-get($color, main);
+            color: color(main);
         }
     }
     p{
         margin: 5px;
     }  
 }
+

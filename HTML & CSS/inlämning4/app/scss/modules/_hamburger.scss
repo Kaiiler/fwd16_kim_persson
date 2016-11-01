@@ -8,16 +8,28 @@
     }
     
     .row{
+        transition: all .3s ease;
         height: 2px;
         width: 20px;
-        background-color: map-get($color, wText);
+        background-color: color(wText);
         margin: 4px 0;
+        
     }
 }
 
-input#show-menu{
-  display: none;
-    &:checked ~ nav > ul{
-        display: flex;
+input#show-menu {
+    display: none;
+    &:checked {
+        ~ nav > ul {
+            display: flex;
+        }
+        ~ label {
+            .hamburger {
+                .row {
+                   @include rowAnimation(-45deg, -135deg)
+                    }
+                }
+            }
+        }
     }
-}
+
