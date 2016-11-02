@@ -27,7 +27,7 @@ nav ul {
         }
         
         &:hover{
-        background:  color(black5);
+        background:  color(bText);
         transition-duration: 0.1s;
         transition: ease-in-out 0.2s;
         }
@@ -82,6 +82,9 @@ nav ul ul {
     z-index: 99999;
     width: 100%;
     top:(30px + 4);
+     @include respond-to('large'){
+        top:(60px + 4);
+    }
     li{
       display: block;
     background: color(navGray);
@@ -93,12 +96,9 @@ nav ul ul {
     }
     ul{
         top:46px;
+    }
         }
-    }
-    @include respond-to('large'){
-        top:(60px + 4);
-    }
-}
+
 nav ul li:hover > ul{
 	display: block;
 }

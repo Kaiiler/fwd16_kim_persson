@@ -1,9 +1,8 @@
-@import 'normalize.scss';
-@import 'typography.scss';
-@import '../utilities/variables.scss';
+@import 'normalize';
+@import 'typography';
 
 body {
-    background-image: url(../images/background-image.jpg);
+    background-image: url(../../images/o-SCOTLAND-facebook1.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
