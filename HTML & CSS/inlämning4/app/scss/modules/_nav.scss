@@ -82,6 +82,7 @@ nav ul ul {
     z-index: 99999;
     width: 100%;
     top:(30px + 4);
+    left:0px;
      @include respond-to('large'){
         top:(60px + 4);
     }
