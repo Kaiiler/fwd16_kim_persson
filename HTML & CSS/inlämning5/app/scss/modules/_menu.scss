@@ -25,7 +25,8 @@ nav ul {
         @include respond-to('large') {
             flex: 1;
         }
-        a {
+        a, label {
+            cursor:pointer;
             text-decoration: none;
             text-align: center;
             display: block;
@@ -71,10 +72,22 @@ nav ul ul {
         
         @include respond-to('large'){
         top: 0px;
-        right:225px;
+        left:223px;
         }
     }
 }
-nav ul li:hover > ul {
+
+//checkbox dropdown
+input#checkbox_toggle{
+    display: none;
+}
+input#checkbox_toggle:checked ~ ul {
     display: block;
 }
+input#checkbox_toggle2{
+    display: none;
+}
+input#checkbox_toggle2:checked ~ ul {
+    display: block;
+}
+
