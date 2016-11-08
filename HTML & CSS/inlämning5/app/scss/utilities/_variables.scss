@@ -1,4 +1,4 @@
-// BREAKPOINTS
+/// BREAKPOINTS
 $breakpoints: (
   'medium': ( min-width:  48.000em ),
   'large':  ( min-width: 62.000em ),
@@ -6,22 +6,22 @@ $breakpoints: (
 ) !default;
 
 @mixin respond-to($breakpoint) {
-  // If the key exists in the map
+  /// If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
-    // Prints a media query based on the value
+    /// Prints a media query based on the value
     @media #{inspect(map-get($breakpoints, $breakpoint))} {
       @content;
     }
   }
  
-  // If the key doesn't exist in the map
+  /// If the key doesn't exist in the map
   @else {
     @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
         + "Available breakpoints are: #{map-keys($breakpoints)}.";
   }
 }
 
-// COLORS
+/// COLORS
 $color: (
   main: darkred,
   wText: white,
@@ -31,7 +31,7 @@ $color: (
   navGray: gray
 ) !default;
 
-// FUNCTION FOR CALLING COLORS EASILY
+/// FUNCTION FOR CALLING COLORS EASILY
 @function color($key) {
     @if map-has-key($color, $key) {
         @return map-get($color, $key);
@@ -39,3 +39,18 @@ $color: (
         @warn "No valid key was found";
     }
 }
+
+/// Color map for flexcards
+$colors: (
+   red,
+    lightgray,
+    orangered,
+    yellow,
+    limegreen,
+    darkred,
+    gray,
+    orange,
+    gold,
+    lawngreen 
+);
+

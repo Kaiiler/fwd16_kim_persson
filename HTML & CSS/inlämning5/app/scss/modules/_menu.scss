@@ -16,7 +16,7 @@ nav ul {
     li {
         flex: 1;
         width: 100%;
-        display: flex;
+        display: block;
         align-items: center;
         justify-content: center;
         @include respond-to('medium') {
@@ -24,6 +24,7 @@ nav ul {
         }
         @include respond-to('large') {
             flex: 1;
+            display:flex;
         }
         a, label {
             cursor:pointer;
@@ -55,10 +56,13 @@ ul li.dropdown {
 }
 nav ul ul {
     display: none;
-    position: absolute;
+    position: static;
     z-index: 99999;
     width: 100%;
     top: 48px;
+    @include respond-to('large'){
+        position:absolute;
+    }
     li {
         display: block;
         background: color(wText);
@@ -78,16 +82,18 @@ nav ul ul {
 }
 
 //checkbox dropdown
-input#checkbox_toggle{
+input#submenu_toggle{
     display: none;
+    &:checked ~ ul {
+        display:block;
+    }
 }
-input#checkbox_toggle:checked ~ ul {
+
+input#submenu_toggle2{
+    display: none;
+    &:checked ~ ul {
     display: block;
 }
-input#checkbox_toggle2{
-    display: none;
 }
-input#checkbox_toggle2:checked ~ ul {
-    display: block;
-}
+
 

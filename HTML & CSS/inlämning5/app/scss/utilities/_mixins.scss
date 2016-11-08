@@ -1,3 +1,4 @@
+///Mixin for hamburger animation
 @mixin rowAnimation($rotationTop, $rotationBottom) {
     @for $i from 1 through 3 {
         @if $i==1 {
@@ -17,4 +18,26 @@
             }
         }
     }
+}
+
+/// Loops colors through colormap
+@mixin loop-colors {
+   @for $i from 1 through length($colors){
+      &:nth-child(#{$i}){
+         color: nth($colors, $i);
+      }
+   }
+}
+
+///Changes property for every 5th element
+@mixin fifth{
+   @for $i from 1 through 10{
+      @if $i % 5 == 0 {
+         @include respond-to('medium'){
+            &:nth-child(#{$i}){
+               flex: 1 1 58%;
+            }
+         }
+      }
+   }
 }
