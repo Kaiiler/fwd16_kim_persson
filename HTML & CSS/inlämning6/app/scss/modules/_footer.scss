@@ -1,0 +1,53 @@
+.footercontainer{
+  color:color(bText);
+  display:flex;
+  flex-flow: column nowrap;
+  width:100%;
+  
+    @include respond-to('large'){
+    flex-flow:row;
+        
+  }
+  .footeritem{
+      padding:10px;
+    display:flex;
+    flex: 1;
+    background-color:color(wText);
+    border-top: 1px solid color(black2);
+    flex-direction: column;
+      
+      h2{
+          margin-bottom:5px;
+          font-size: 1.2em;
+      }
+      
+      ul{
+          list-style: none;
+          padding: 0;
+          
+          a{
+              color:color(black5);
+              text-decoration: none;
+              font-weight: 600;
+              font-size:0.7em;
+              text-transform: uppercase;
+              
+              &:hover{
+                  color:color(main);
+              }
+          }
+      }
+} 
+    .footeritem.social{
+          ul{
+              display:flex;
+              flex-direction: row;
+              
+              i{
+                  font-size: 2em;
+                  margin-left:10px;
+                  
+              }
+          }
+      }
+}

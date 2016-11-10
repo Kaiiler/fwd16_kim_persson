@@ -1,0 +1,23 @@
+%flexcard{
+    display:flex;
+    flex: 1 1 100%;
+    padding:20px;
+    flex-direction: column;
+    background-color:color(wText);
+    @include loop-colors;
+    @include fifth;
+    
+    h2{
+        text-transform: uppercase;
+    }
+    
+    img{
+        width:100%;
+        height:auto;
+    }
+    
+    @include respond-to('medium'){
+          flex: 1 1 25%;
+        margin:10px;
+    }
+}

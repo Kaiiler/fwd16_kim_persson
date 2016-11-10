@@ -1,0 +1,31 @@
+.megamenu{
+    text-transform: uppercase;
+    background: color(wText);
+    display:none;
+    position: static;
+    top:48px;
+    @include respond-to('large'){
+        position:absolute;
+        width:1000px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content:space-around;
+        ul{
+            flex:none;
+            width:20%;
+            
+            li{
+                font-size:0.7em;
+                
+                a{
+                    flex:none;
+                    border:none;
+                    
+                    &:hover{
+                        border-bottom:none;
+                    }
+                }
+            }
+        }
+    }
+}

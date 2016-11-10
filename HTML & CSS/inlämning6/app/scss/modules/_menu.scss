@@ -1,0 +1,67 @@
+nav > ul {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    @include respond-to('medium') {
+        flex-wrap: wrap;
+        flex-direction: row;
+        display: none;
+    }
+    @include respond-to('large'){
+        display:flex;
+    }
+    li {
+        flex: 1;
+        width: 100%;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        @include respond-to('medium') {
+            flex: 1 45%;
+        }
+        @include respond-to('large') {
+            flex: 1;
+            display:flex;
+        }
+        a, label {
+            cursor:pointer;
+            text-decoration: none;
+            text-align: center;
+            display: block;
+            text-transform: uppercase;
+            font-weight: bold;
+            flex: 1;
+            color: color(bText);
+            padding: 14px 5px;
+            border-bottom: 1px solid color(black2);
+            
+            &:hover {
+                color: color(main);
+                border-bottom: 1px solid color(main);
+            }
+            
+        }
+        
+    }
+}
+
+ul li.dropdown {
+    position: relative;
+}
+
+//checkbox dropdown
+input#submenu_toggle{
+    display: none;
+    &:checked ~ .megamenu {
+        display:block;
+        @include respond-to('large'){
+            display:flex;
+        }
+    }
+}
+
+
+

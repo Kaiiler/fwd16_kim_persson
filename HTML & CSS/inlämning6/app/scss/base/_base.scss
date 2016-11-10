@@ -1,0 +1,17 @@
+@import 'normalize';
+@import 'typography';
+
+body {
+    background-image: url(../images/background-image.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: color(navGray);
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+//IMPORT FONT
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+    
