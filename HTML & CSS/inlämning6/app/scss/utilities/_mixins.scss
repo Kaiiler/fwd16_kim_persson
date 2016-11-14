@@ -4,6 +4,7 @@
         @if $i==1 {
             &:nth-child(#{$i}) {
                 transform: translateY(6px) rotate(#{$rotationTop});
+                background-color: color('main');
             }
         }
         @else if $i==2 {
@@ -15,6 +16,7 @@
         @else if $i==3 {
             &:nth-child(#{$i}) {
                 transform: translateY(-6px) rotate(#{$rotationBottom});
+                background-color: color('main');
             }
         }
     }
@@ -24,7 +26,7 @@
 @mixin loop-colors {
    @for $i from 1 through length($colors){
       &:nth-child(#{$i}){
-         color: nth($colors, $i);
+         background-color: nth($colors, $i);
       }
    }
 }
@@ -38,6 +40,15 @@
                flex: 1 1 58%;
             }
          }
+      }
+   }
+}
+
+/// Changes opacity for every 2nd element
+@mixin second {
+   @for $i from 1 through length($opacities){
+      &:nth-child(#{$i}){
+         opacity: nth($opacities, $i);
       }
    }
 }

@@ -9,12 +9,18 @@
         
   }
   .footeritem{
-      padding:10px;
+    padding:10px;
     display:flex;
     flex: 1;
     background-color:color(wText);
     border-top: 1px solid color(black2);
     flex-direction: column;
+      
+         @include respond-to('large'){
+               align-items: center;
+               padding:50px 0;
+      }
+      
       
       h2{
           margin-bottom:5px;
@@ -24,6 +30,7 @@
       ul{
           list-style: none;
           padding: 0;
+        
           
           a{
               color:color(black5);
@@ -37,17 +44,5 @@
               }
           }
       }
-} 
-    .footeritem.social{
-          ul{
-              display:flex;
-              flex-direction: row;
-              
-              i{
-                  font-size: 2em;
-                  margin-left:10px;
-                  
-              }
-          }
-      }
+}
 }

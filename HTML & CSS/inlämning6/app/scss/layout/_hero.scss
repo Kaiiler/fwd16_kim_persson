@@ -1,23 +1,22 @@
-.hero{
-    height:100vh;
+.bigTitle{
     width:100%;
-    background-color: rgba(255,255,255,0.7);
+    background-color: color(wText);
     display:flex;
     justify-content: center;
     align-items: center;
     font-family: raleway;
     
-    .hero-content{
+    .bigTitle-content{
         
         h1{
             color:color(main);
-            font-size: 2.5em;
+            font-size: 2.3em;
             @include respond-to('unfuck'){
                 font-size: 3em;
             }
         }
         p{
-            color:color(wText);
+            color:color(black5);
             font-size:1.5em;
             text-align: center;
             

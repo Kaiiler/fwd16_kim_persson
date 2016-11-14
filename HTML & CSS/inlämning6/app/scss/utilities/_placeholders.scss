@@ -1,0 +1,48 @@
+%flexcard{
+    display:flex;
+    flex: 1 1 100%;
+    padding:20px;
+    flex-direction: column;
+    @include loop-colors;
+    @include fifth;
+    @include second;
+    
+    h2{
+        text-transform: uppercase;
+    }
+    
+    img{
+        width:100%;
+        height:auto;
+    }
+    .flexcontent{
+       display:flex;
+        flex-flow: row nowrap;
+        .hatprice{
+            margin-left:auto;
+        
+    }
+    }
+    a{
+        text-decoration: none;
+        margin-top:auto;
+    .btn{
+        width:100%;
+        height:20px;
+        padding: 10px 0;
+        background-color:color(black5);
+        color:color(wText);
+        border:none;
+        text-align: center;
+        
+    }
+        
+    }
+    
+    @include respond-to('medium'){
+          flex: 1 1 25%;
+          margin:10px;
+        opacity:0.9;
+    box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.5);
+    }
+}

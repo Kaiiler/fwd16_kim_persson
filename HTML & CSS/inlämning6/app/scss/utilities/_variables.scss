@@ -24,7 +24,7 @@ $breakpoints: (
 
 /// COLORS
 $color: (
-  main: darkred,
+  main: #cbffcb,
   wText: white,
   bText: black,
   black2: rgba(0,0,0,0.2),
@@ -43,15 +43,27 @@ $color: (
 
 /// Color map for flexcards
 $colors: (
-   red,
-    lightgray,
-    orangered,
-    yellow,
-    limegreen,
-    darkred,
-    gray,
-    orange,
-    gold,
-    lawngreen 
+    	#C23B22,
+    #FFD1DC,
+    #966FD6,
+    #FDFD96,
+    #77DD77,
+    #AEC6CF,
+   #FF6961,
+    #CB99C9,
+    #CFCFC4,
+    #836953 
+);
+$opacities:(
+    1.0,
+    0.9,
+    0.8,
+    0.7,
+    0.6,
+    0.5,
+    0.4,
+    0.3,
+    0.2,
+    0.1
 );
 
