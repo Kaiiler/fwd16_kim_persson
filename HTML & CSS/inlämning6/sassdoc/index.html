@@ -1,0 +1,96 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Project - v1.0.0</title><link rel="stylesheet" href="assets/css/main.css"><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,700" rel="stylesheet" type="text/css"><meta name="viewport" content="width=device-width"><meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible"><!-- Open Graph tags --><meta property="og:title" content="Project - SassDoc"><meta property="og:type" content="website"><meta property="og:description" content="Release the docs!"><!-- Thanks to Sass-lang.com for the icons --><link href="assets/images/favicon.png" rel="shortcut icon"></head><body><aside class="sidebar" role="nav"><div class="sidebar__header"><h1 class="sidebar__title">Project - 1.0.0</h1></div><div class="sidebar__body"><button type="button" class="btn-toggle js-btn-toggle" data-alt="Open all">Close all</button><p class="sidebar__item sidebar__item--heading" data-slug="undefined"><a href="#undefined">General</a></p><div><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-mixin"><a href="#undefined-mixin">mixins</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="rowAnimation" data-type="mixin"><a href="#undefined-mixin-rowAnimation">rowAnimation</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="loop-colors" data-type="mixin"><a href="#undefined-mixin-loop-colors">loop-colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="fifth" data-type="mixin"><a href="#undefined-mixin-fifth">fifth</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="second" data-type="mixin"><a href="#undefined-mixin-second">second</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="respond-to" data-type="mixin"><a href="#undefined-mixin-respond-to">respond-to</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-variable"><a href="#undefined-variable">variables</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="breakpoints" data-type="variable"><a href="#undefined-variable-breakpoints">breakpoints</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="color" data-type="variable"><a href="#undefined-variable-color">color</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="colors" data-type="variable"><a href="#undefined-variable-colors">colors</a></li><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="opacities" data-type="variable"><a href="#undefined-variable-opacities">opacities</a></li></ul><p class="sidebar__item sidebar__item--sub-heading" data-slug="undefined-function"><a href="#undefined-function">functions</a></p><ul class="list-unstyled"><li class="sidebar__item sassdoc__item" data-group="undefined" data-name="color" data-type="function"><a href="#undefined-function-color">color</a></li></ul></div></div></aside><article class="main" role="main"><header class="header" role="banner"><div class="container"><div class="sassdoc__searchbar searchbar"><label for="js-search-input" class="visually-hidden">Search</label><div class="searchbar__form" id="js-search"><input name="search" type="search" class="searchbar__field" autocomplete="off" autofocus id="js-search-input" placeholder="Search"><ul class="searchbar__suggestions" id="js-search-suggestions"></ul></div></div></div></header><section class="main__section"><h1 class="main__heading" id="undefined"><div class="container">General</div></h1><section class="main__sub-section" id="undefined-mixin"><h2 class="main__heading--secondary"><div class="container">mixins</div></h2><section class="main__item container item" id="undefined-mixin-rowAnimation"><h3 class="item__heading"><a class="item__name" href="#mixin-rowAnimation">rowAnimation</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin rowAnimation() { 
+    @for $i from 1 through 3 {
+        @if $i==1 {
+            &amp;:nth-child(#{$i}) {
+                transform: translateY(6px) rotate(#{$rotationTop});
+            }
+        }
+        @else if $i==2 {
+            &amp;:nth-child(#{$i}) {
+                transform: rotate(#{$rotationTop});
+                opacity: 0;
+            }
+        }
+        @else if $i==3 {
+            &amp;:nth-child(#{$i}) {
+                transform: translateY(-6px) rotate(#{$rotationBottom}); 
+            }
+        }
+    }
+ }" data-collapsed="@mixin rowAnimation() { ... }"><code>@mixin rowAnimation() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Mixin for hamburger animation @param {degrees} $rotationTop - rotate according to given value @param {degrees} $rotationBottom - rotate according to given value</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p></section><section class="main__item container item" id="undefined-mixin-loop-colors"><h3 class="item__heading"><a class="item__name" href="#mixin-loop-colors">loop-colors</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin loop-colors() { 
+   @for $i from 1 through length($colors){
+      &amp;:nth-child(#{$i}){
+         background-color: nth($colors, $i);
+      }
+   }
+ }" data-collapsed="@mixin loop-colors() { ... }"><code>@mixin loop-colors() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Loops colors through colormap</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-colors"><code>colors</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-fifth"><h3 class="item__heading"><a class="item__name" href="#mixin-fifth">fifth</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin fifth() { 
+   @for $i from 1 through 10{
+      @if $i % 5 == 0 {
+         @include respond-to(&#39;medium&#39;){
+            &amp;:nth-child(#{$i}){
+               flex: 1 1 58%;
+            }
+         }
+      }
+   }
+ }" data-collapsed="@mixin fifth() { ... }"><code>@mixin fifth() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Changes property for every 5th element</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-respond-to"><code>respond-to</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-second"><h3 class="item__heading"><a class="item__name" href="#mixin-second">second</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin second() { 
+   @for $i from 1 through length($opacities){
+      &amp;:nth-child(#{$i}){
+         opacity: nth($opacities, $i);
+      }
+   }
+ }" data-collapsed="@mixin second() { ... }"><code>@mixin second() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Changes opacity for every 2nd element</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-opacities"><code>opacities</code></a></li></ul></section><section class="main__item container item" id="undefined-mixin-respond-to"><h3 class="item__heading"><a class="item__name" href="#mixin-respond-to">respond-to</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@mixin respond-to() { 
+  /// If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    /// Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  /// If the key doesn&#39;t exist in the map
+  @else {
+    @warn &quot;Unfortunately, no value could be retrieved from `#{$breakpoint}`. &quot;
+        + &quot;Available breakpoints are: #{map-keys($breakpoints)}.&quot;;
+  }
+ }" data-collapsed="@mixin respond-to() { ... }"><code>@mixin respond-to() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Makes calling breakpoints easier</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Content</h3><p>This mixin allows extra content to be passed (through the <code>@content</code> directive).<h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-breakpoints"><code>breakpoints</code></a></li></ul><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-fifth"><code>fifth</code></a></li></ul></p></section></section><section class="main__sub-section" id="undefined-variable"><h2 class="main__heading--secondary"><div class="container">variables</div></h2><section class="main__item container item" id="undefined-variable-breakpoints"><h3 class="item__heading"><a class="item__name" href="#variable-breakpoints">breakpoints</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$breakpoints: (
+  &#39;unfuck&#39;:( min-width: 451px ),
+  &#39;medium&#39;: ( min-width:  48.000em ),
+  &#39;large&#39;:  ( min-width: 62.000em ),
+  &#39;wide&#39;:  ( min-width: 600px )
+) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>BREAKPOINTS</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-respond-to"><code>respond-to</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-color"><h3 class="item__heading"><a class="item__name" href="#variable-color">color</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$color: (
+  main: #cbffcb,
+  wText: white,
+  bText: black,
+  black2: rgba(0,0,0,0.2),
+  black5: rgba(0,0,0,0.5),
+  navGray: gray
+) !default;</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>COLORS</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[function]</span> <a href="#undefined-function-color"><code>color</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-colors"><h3 class="item__heading"><a class="item__name" href="#variable-colors">colors</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$colors: (
+    	#C23B22,
+    #FFD1DC,
+    #966FD6,
+    #FDFD96,
+    #77DD77,
+    #AEC6CF,
+   #FF6961,
+    #CB99C9,
+    #CFCFC4,
+    #836953 
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Color map for flexcards</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-loop-colors"><code>loop-colors</code></a></li></ul></section><section class="main__item container item" id="undefined-variable-opacities"><h3 class="item__heading"><a class="item__name" href="#variable-opacities">opacities</a></h3><div class="item__code-wrapper"><pre class="item__code language-scss"><code>$opacities: (
+    1.0,
+    0.9,
+    0.8,
+    0.7,
+    0.6,
+    0.5,
+    0.4,
+    0.3,
+    0.2,
+    0.1
+);</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>Map for opacity values</p></div><h3 class="item__sub-heading">Used by</h3><ul class="list-unstyled"><li><span class="item__cross-type">[mixin]</span> <a href="#undefined-mixin-second"><code>second</code></a></li></ul></section></section><section class="main__sub-section" id="undefined-function"><h2 class="main__heading--secondary"><div class="container">functions</div></h2><section class="main__item container item" id="undefined-function-color"><h3 class="item__heading"><a class="item__name" href="#function-color">color</a></h3><div class="item__code-wrapper"><pre class="item__code item__code--togglable language-scss" data-current-state="collapsed" data-expanded="@function color() { 
+    @if map-has-key($color, $key) {
+        @return map-get($color, $key);
+    }@else{
+        @warn &quot;No valid key was found&quot;;
+    }
+ }" data-collapsed="@function color() { ... }"><code>@function color() { ... }</code></pre></div><h3 class="item__sub-heading">Description</h3><div class="item__description"><p>FUNCTION FOR CALLING COLORS EASILY</p></div><h3 class="item__sub-heading">Parameters</h3><p>None.</p><h3 class="item__sub-heading">Requires</h3><ul class="list-unstyled"><li class="item__description item__description--inline"><span class="item__cross-type">[variable]</span> <a href="#undefined-variable-color"><code>color</code></a></li></ul></section></section></section><footer class="footer" role="contentinfo"><div class="container"><div class="footer__project-info project-info"><!-- Name and URL --><span class="project-info__name">Project</span><!-- Version --> <span class="project-info__version">- v1.0.0</span><!-- License --> <span class="project-info__license">, under ISC</span></div><a class="footer__watermark" href="http://sassdoc.com"><img src="assets/images/logo_light_inline.svg" alt="SassDoc Logo"></a></div></footer></article><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script><script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')</script><script src="assets/js/main.min.js"></script></body></html>

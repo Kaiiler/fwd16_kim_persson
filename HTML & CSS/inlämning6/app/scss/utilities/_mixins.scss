@@ -1,4 +1,6 @@
 ///Mixin for hamburger animation
+/// @param {angle} $rotationTop - rotate according to given value
+/// @param {angle} $rotationBottom - rotate according to given value
 @mixin rowAnimation($rotationTop, $rotationBottom) {
     @for $i from 1 through 3 {
         @if $i==1 {
