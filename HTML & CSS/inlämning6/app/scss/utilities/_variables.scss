@@ -6,6 +6,7 @@ $breakpoints: (
   'wide':  ( min-width: 600px )
 ) !default;
 
+/// Makes calling breakpoints easier
 @mixin respond-to($breakpoint) {
   /// If the key exists in the map
   @if map-has-key($breakpoints, $breakpoint) {
@@ -54,6 +55,7 @@ $colors: (
     #CFCFC4,
     #836953 
 );
+/// Map for opacity values
 $opacities:(
     1.0,
     0.9,

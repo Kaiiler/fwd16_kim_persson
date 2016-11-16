@@ -6,7 +6,7 @@
     top:48px;
     z-index:9999;
     label{
-                    display:none;
+            display:none;
                 }
     input#first-name, input#last-name{
         width:90%;
@@ -19,7 +19,8 @@
     }
     @include respond-to('large'){
         position:absolute;
-        width:700px;
+        left:0;
+        width:100%;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content:space-around;

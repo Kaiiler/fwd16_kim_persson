@@ -1,5 +1,4 @@
 nav > ul {
-    position:relative;
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -48,11 +47,6 @@ nav > ul {
         
     }
 }
-
-ul li.dropdown {
-    position: relative;
-}
-
 //checkbox dropdown
 input#submenu_toggle{
     display: none;

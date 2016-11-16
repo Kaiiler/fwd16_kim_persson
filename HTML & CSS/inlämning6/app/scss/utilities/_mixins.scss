@@ -4,7 +4,6 @@
         @if $i==1 {
             &:nth-child(#{$i}) {
                 transform: translateY(6px) rotate(#{$rotationTop});
-                background-color: color('main');
             }
         }
         @else if $i==2 {
@@ -15,8 +14,7 @@
         }
         @else if $i==3 {
             &:nth-child(#{$i}) {
-                transform: translateY(-6px) rotate(#{$rotationBottom});
-                background-color: color('main');
+                transform: translateY(-6px) rotate(#{$rotationBottom}); 
             }
         }
     }
