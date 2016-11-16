@@ -1,4 +1,4 @@
-///Mixin for hamburger animation
+/// Mixin for hamburger animation
 /// @param {angle} $rotationTop - rotate according to given value
 /// @param {angle} $rotationBottom - rotate according to given value
 @mixin rowAnimation($rotationTop, $rotationBottom) {
@@ -31,7 +31,7 @@
    }
 }
 
-///Changes property for every 5th element
+/// Changes property for every 5th element
 @mixin fifth{
    @for $i from 1 through 10{
       @if $i % 5 == 0 {
