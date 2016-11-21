@@ -3,8 +3,11 @@
     background: color(mainBlue);
     display:none;
     position: static;
-    top:48px;
+    top:0;
     z-index:9999;
+    h4{
+            margin-top:0;
+        }
     label{
             display:none;
                 }
@@ -18,6 +21,7 @@
     }
     }
     @include respond-to('large'){
+        top:119px;
         position:absolute;
         left:0;
         width:100%;
@@ -36,6 +40,9 @@
                 margin-bottom:0;
                 font-size:1em;
             }
+            input#first-name, input#last-name{
+        width:auto;
+    }
             
             li{
                 font-size:0.7em;

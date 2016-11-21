@@ -1,0 +1,8 @@
+.flexcontainerOne{
+    @extend %flexcontainer;
+    justify-content: center;
+}
+.flexcontainerTwo{
+     @extend %flexcontainer;
+     @include threefour;
+}

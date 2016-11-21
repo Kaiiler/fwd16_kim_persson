@@ -4,7 +4,8 @@
     flex-direction:column;
     background-color: color(wText);
     
-    @include respond-to('medium'){
+    @include respond-to('large'){
         flex-flow: row wrap;
+        
     }
 }

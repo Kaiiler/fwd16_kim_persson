@@ -1,0 +1,47 @@
+%flexcard{
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    padding:2%;
+    opacity:0.7;
+    
+    @include respond-to('large'){
+         width:30%;
+    }
+    p{
+        background: darkorange;
+    }
+    img{
+        max-width: 250px;
+    }
+    h3{
+        color:red;
+        &:before{
+            content:"Kill this poacher - REWARD "
+        }
+    }
+}
+%flexcardthreefour{
+    .flexcard{
+        &:nth-child(n+3):nth-child(-n+4){
+        box-sizing: border-box;
+        border: 2px solid #ec4970 ;
+        border-radius: 10px;
+        
+    }
+}
+}
+%flexcontainer{
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    @include respond-to('large'){
+        flex-flow: row wrap;
+    }
+
+}
+%hamburger{
+  content: "\f0c9";
+    color:white;
+  font-family: FontAwesome;
+}

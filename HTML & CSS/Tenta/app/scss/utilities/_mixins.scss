@@ -1,0 +1,35 @@
+
+/// Mixin for calling background image and centering it
+/// @param {image-path} $img-uri - Uses the given imagepath
+@mixin cover-background($bgurl) {
+  background: url($bgurl) no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+
+/// Loops colors through colormap
+@mixin loop-colors {
+   @for $i from 1 through length($colors){
+      &:nth-child(#{$i}){
+         background-color: nth($colors, $i);
+      }
+   }
+}
+
+/// Changes property for every 2nd element
+@mixin second{
+   @for $i from 1 through 6{
+      @if $i % 2 == 0 {
+         @include respond-to('large'){
+            &:nth-child(#{$i}){
+               flex: 1 1 55%;
+            }
+         }
+      }
+   }
+}
+/// Adding border to card nr.3 and nr.4
+@mixin threefour{
+  @extend %flexcardthreefour;
+}

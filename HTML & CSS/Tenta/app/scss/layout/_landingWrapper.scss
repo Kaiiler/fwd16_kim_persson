@@ -1,0 +1,20 @@
+
+#landingWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+    a{
+    color:  color(wText);
+    text-decoration: none;
+    text-align: center;
+        i{
+            font-size: 5em;
+            color: color(main);
+        }
+    }
+    p{
+        margin: 5px;
+    }  
+}

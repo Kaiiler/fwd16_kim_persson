@@ -44,7 +44,7 @@
    }
 }
 
-/// Changes opacity for every 2nd element
+/// Changes opacity through opacity colormap
 @mixin second {
    @for $i from 1 through length($opacities){
       &:nth-child(#{$i}){

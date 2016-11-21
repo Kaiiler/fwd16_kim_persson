@@ -1,0 +1,27 @@
+.hamburger{
+  display: inline-block;
+  cursor: pointer;
+  margin: 10px;
+    
+    &:after{
+        @extend %hamburger;
+        position:absolute;
+        right:20px;
+        top:60px;
+    }
+    
+    @include respond-to('large'){
+        display:none;
+    }
+    
+    
+}
+
+input#show-menu {
+    display: none;
+    &:checked {
+        ~ nav > ul {
+            display: flex;
+        }
+        }
+    }

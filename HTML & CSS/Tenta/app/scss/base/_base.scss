@@ -1,0 +1,10 @@
+@import 'normalize';
+@import 'typography';
+
+body {
+    background-color: color(navGray);
+    box-sizing: border-box;
+    font-family: sans-serif;
+    @include cover-background('../images/South-Africa-Safari.jpg');
+}
+    
