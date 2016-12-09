@@ -1,0 +1,22 @@
+#landingContainer{
+    height:325px;
+    width:300px;
+    padding:25px;
+    background-color:rosybrown;
+    opacity: 0.7;
+    font-family: serif;
+    .faBox{
+        Background-color:white;
+        padding:10px;
+        
+        h1{
+            color:red;
+        }
+        i{
+            color:red;
+        }
+    }
+    p{
+            margin-top:30px;
+        }
+}
