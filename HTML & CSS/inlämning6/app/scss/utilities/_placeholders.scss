@@ -5,8 +5,7 @@
     flex-direction: column;
     @include loop-colors;
     @include fifth;
-    @include second;
-    
+    //@include second;
     h2{
         text-transform: uppercase;
     }
@@ -20,7 +19,6 @@
         flex-flow: row nowrap;
         .hatprice{
             margin-left:auto;
-        
     }
     }
     a{
@@ -34,11 +32,8 @@
         color:color(wText);
         border:none;
         text-align: center;
-        
+        }
     }
-        
-    }
-    
     @include respond-to('medium'){
           flex: 1 1 25%;
           margin:10px;

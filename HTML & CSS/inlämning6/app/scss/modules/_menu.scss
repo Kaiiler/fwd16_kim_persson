@@ -41,6 +41,8 @@ nav > ul {
             &:hover {
                 color: color(main);
                 border-bottom: 1px solid color(main);
+                transition: color 0.4s linear;
+                transition: border-bottom 0.4s linear;
             }
             
         }

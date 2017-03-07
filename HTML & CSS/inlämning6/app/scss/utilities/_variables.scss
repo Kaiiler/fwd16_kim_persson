@@ -25,7 +25,7 @@ $breakpoints: (
 
 /// COLORS
 $color: (
-  main: #cbffcb,
+  main: #0084b4,
   wText: white,
   bText: black,
   black2: rgba(0,0,0,0.2),
@@ -54,6 +54,12 @@ $colors: (
     #CB99C9,
     #CFCFC4,
     #836953 
+);
+$miniColors: (
+    #0084b4,
+    #3b5998,
+    black,
+    #d34836
 );
 /// Map for opacity values
 $opacities:(

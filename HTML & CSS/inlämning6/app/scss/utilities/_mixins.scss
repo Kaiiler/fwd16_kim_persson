@@ -31,6 +31,15 @@
    }
 }
 
+/// Loops color trough colormap for miniMenu
+@mixin loop-miniColors {
+   @for $i from 1 through length($miniColors){
+      &:nth-child(#{$i}){
+         background-color: nth($miniColors, $i);
+      }
+   }
+}
+
 /// Changes property for every 5th element
 @mixin fifth{
    @for $i from 1 through 10{

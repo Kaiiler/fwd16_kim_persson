@@ -1,0 +1,37 @@
+.miniMenu {
+    z-index:8888;
+    position:fixed;
+    display:none;
+    left:0;
+    top:(40%);
+    flex-flow:column nowrap;
+    
+    @include respond-to('large'){
+        display:flex;
+    }
+    ul {
+        display:flex;
+        flex-direction: column;
+        margin:0;
+        padding:0;
+        li{
+            flex:1;
+            list-style: none;
+            margin:0;
+            padding:5px;
+            //padding-left:25px;
+            @include loop-miniColors;
+            border-right:1px solid color(black2);
+            &:first-child {
+                border-top:1px solid color(black2);
+            }
+            &:last-child {
+                border-bottom:1px solid color(black2);
+            }
+            i{
+                font-size: 25px;
+                color:white;
+            }
+        }
+    }
+}

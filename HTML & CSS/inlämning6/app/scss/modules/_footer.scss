@@ -41,6 +41,7 @@
               
               &:hover{
                   color:color(main);
+                  transition: color 0.4s linear;
               }
           }
       }

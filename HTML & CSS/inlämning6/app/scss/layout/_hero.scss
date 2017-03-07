@@ -1,22 +1,28 @@
 .bigTitle{
     width:100%;
-    background-color: color(wText);
+    //background: url("https://media.giphy.com/media/5xtDarzeMKOwjNo1M8U/giphy.gif");
+    background-color: color(main);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     display:flex;
     justify-content: center;
     align-items: center;
     font-family: raleway;
+    min-height:100vh;
     
     .bigTitle-content{
         
         h1{
-            color:color(main);
+            color:color(wText);
             font-size: 2.3em;
             @include respond-to('unfuck'){
                 font-size: 3em;
             }
         }
         p{
-            color:color(black5);
+            color:color(wText);
             font-size:1.5em;
             text-align: center;
             
