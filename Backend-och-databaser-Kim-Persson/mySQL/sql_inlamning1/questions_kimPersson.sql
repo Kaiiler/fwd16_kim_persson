@@ -105,7 +105,7 @@ BEGIN
 END
 
   
-  
+  print substr($name, rand(0, strlen($name)), 1  )
   
   
   
