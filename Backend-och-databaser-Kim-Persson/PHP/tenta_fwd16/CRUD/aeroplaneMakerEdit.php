@@ -1,5 +1,5 @@
 <?php 
-// including the database connection file 
+// including the database connection file to gain access to db
 include_once("config.php");
 // Create protection by confirming a logged in user is in, if not send user to index page
 session_start();

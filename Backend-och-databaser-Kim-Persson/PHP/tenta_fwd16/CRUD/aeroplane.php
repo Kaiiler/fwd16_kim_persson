@@ -11,7 +11,7 @@
             }
             echo "Welcome ".$_SESSION['name']; 
         // call stored procedure to retrieve joined tables
-        $result = $pdo->query("call sp_aeroplane");
+        $result = $pdo->query("call sp_aeroplanes");
         ?>
 <html>
     <head>
@@ -40,7 +40,7 @@
         echo "<td>".$row['aeroplaneTopSpeed']."</td>";
         echo "<td>".$row['aeroplaneRange']."</td>";
         echo "<td>".$row['planeMakerName']."</td>";
-        echo "<td><a href=\"aeroplaneEdit.php?id=$row[planeMakerID]\">Edit</a> | <a href=\"aeroplaneDelete.php?id=$row[planeMakerID]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";        
+        echo "<td><a  href=\"aeroplaneEdit.php?id=$row[aeroplaneID]\">Edit</a> | <a href=\"aeroplaneDelete.php?id=$row[aeroplaneID]\" onClick=\"return confirm('Are you sure you want to delete?')\">Delete</a></td>";
     }
     ?>
     <a href="logout.php">Logout</a>

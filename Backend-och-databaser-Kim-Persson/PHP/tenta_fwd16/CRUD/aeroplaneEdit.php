@@ -10,9 +10,9 @@ session_start();
             echo "Welcome ".$_SESSION['name'];
 // retrieve the correct id from aeroplane and select the correct aeroplane info based on ID
 $id = $_GET['id'];
-$sql = "SELECT * FROM aeroplane WHERE aeroplaneMakerID=:aeroplaneMakerID"; 
+$sql = "SELECT * FROM aeroplane WHERE aeroplaneID=:aeroplaneID"; 
 $query = $pdo->prepare($sql); 
-$query->execute(array(':aeroplaneMakerID' => $id)); 
+$query->execute(array(':aeroplaneID' => $id)); 
 // loop trough DB info and put each row in to a variable
 while($row = $query->fetch()) 
 { 
@@ -62,7 +62,7 @@ if(empty($aeroplanename) || empty($planemakerid) || empty($aeroplanetopspeed) ||
 } else { 
     
     // if all fields have valid values update database
-$sql = "UPDATE aeroplane SET aeroplaneName=:aeroplaneName, aeroplaneTopSpeed =:aeroplaneTopSpeed, aeroplaneRange =:aeroplaneRange WHERE planeMakerID=:planeMakerID";
+$sql = "UPDATE aeroplane SET aeroplaneName=:aeroplaneName, aeroplaneTopSpeed =:aeroplaneTopSpeed, aeroplaneRange =:aeroplaneRange, planeMakerID =:planeMakerID WHERE aeroplaneID=:id";
 
 $query = $pdo->prepare($sql); 
 
@@ -70,6 +70,7 @@ $query->bindparam(':aeroplaneName', $aeroplanename);
 $query->bindparam(':aeroplaneTopSpeed', $aeroplanetopspeed);
 $query->bindparam(':aeroplaneRange', $aeroplanerange);
 $query->bindparam(':planeMakerID', $planemakerid);
+$query->bindparam(':id', $id);
 $query->execute(); 
 
 header("Location: aeroplane.php"); 
